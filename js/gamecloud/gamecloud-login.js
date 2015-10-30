@@ -80,6 +80,9 @@ function Logout() {
     $('#gamecloud-logged').hide();
     // Empty achievements from memory
     Achievements.zeroAchievements();
+    // And initialize a new user and session
+    Gamecloud.initializeUserId();
+    Gamecloud.initializeSession();
 }
 
 /**
@@ -128,13 +131,19 @@ function SendToServer(json, callback) {
 function AuthCallback(data) {
     if (CheckAuth(data)) {
         // Authentication success
-        alert("Login succesfull!");
+        $.notify("Login Successful!", "success");
         // Hide yourself
         $('#gamecloud-login').hide();
         // And show the logged
         $('#gamecloud-logged').show();
         // And set username
-        $('#gamecloud-username').text($('#gamecloud-login-username').val());
+        var playerId = $('#gamecloud-login-username').val();
+        $('#gamecloud-username').text(playerId);
+
+        // And make Gamecloud to initialize the userId
+        Gamecloud.initializeUserId();
+        // And create a new session
+        Gamecloud.initializeSession();
 
         // Check the player achievements
         Achievements.retrieveAchievementsFromGamecloud(function(err, result) {
@@ -145,7 +154,7 @@ function AuthCallback(data) {
             }
         });
     } else {
-        alert(data);
+        $.notify("Error while logging: " + data, "danger");
     }
 }
 
