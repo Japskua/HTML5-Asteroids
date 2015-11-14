@@ -3,27 +3,27 @@
  */
 
 var Events = {
-    _hashTriggerPlayerDies : "qoxyomgo9ntutyb9",
-    _hashCheckPlayerDeaths : "q5hkxlt3b6vtpgb9",
-    _hashTriggerGameOver : "1gc0n61e1d53tyb9",
-    _hashCheckPlayerGameOvers : "t7b6g13prnj6ecdi",
-    _hashTriggerStartNewGame : "3txcv5phj5ze61or",
-    _hashTriggerNewLevel : "zscriegujqlx47vi",
+    _hashTriggerPlayerDies : "ei00dtn4put2zkt9",
+    _hashCheckPlayerDeaths : "99xm7kmwpxim5cdi",
+    _hashTriggerGameOver : "0o1nodsdl6315rk9",
+    _hashCheckPlayerGameOvers : "wmiiy720dal15rk9",
+    _hashTriggerStartNewGame : "glf740icj7x5stt9",
+    _hashTriggerNewLevel : "0uo8lvcx7dlpu8fr",
 
     _gainAchievementHashes : {
-        "newPlayer" : "5e67w4efn6s10pb9",
-        "destroyFirstAsteroid" : "ul13s30542o9lik9",
-        "score1000Points" : "lmcvdonsjb81tt9",
-        "10GamesInARow" : "y2l9xmum4u7ynwmi",
-        "idler" : "c1lar1tacmrvygb9"
+        "newPlayer" : "xpzu7z6vlfim5cdi",
+        "destroyFirstAsteroid" : "tckj68ft636561or",
+        "score1000Points" : "m93jz2qd9sdlhaor",
+        "10GamesInARow" : "4ufxcmhu5d1pds4i",
+        "idler" : "d8sgdux7otdfgvi"
     },
 
     _askAschievementHashes : {
-        newPlayer : "r8g8g5jbcjlzbyb9",
-        destroyFirstAsteroid : "0a19kom0bi5m6lxr",
-        score1000Points : "8ab2w5uk26e0zfr",
-        "10GamesInARow" : "e4mf3n35m4h1tt9",
-        idler : "bltjzhh60vdt2o6r"
+        newPlayer : "txiz7jzpz8jv2t9",
+        destroyFirstAsteroid : "8dgu0jurtlqh0k9",
+        score1000Points : "xume0dtx7tsrwwmi",
+        "10GamesInARow" : "rmjehzogj4p4aemi",
+        idler : "nnjcn5j0e3lerk9"
     },
 
     /**
