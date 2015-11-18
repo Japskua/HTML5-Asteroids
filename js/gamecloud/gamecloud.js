@@ -181,7 +181,7 @@ var Gamecloud = {
 
     },
 
-    hasTriggeredEvent : function(authkey, hash, playerId, characterId) {
+    hasTriggeredEvent : function(authkey, hash, playerId, characterId, callback) {
 
         json = {
             "callType": "ask",
@@ -193,9 +193,11 @@ var Gamecloud = {
         };
 
         $.post(SERVER_ADDRESS, JSON.stringify(json), function (data, textStatus, jqXHR) {
-            if (!data) return false;
-            else return data;
-
+            if (!data) {
+                callback("no data", null);
+            } else {
+                callback(null, data);
+            }
         });
 
     }

@@ -26,6 +26,12 @@ var Events = {
         idler : "nnjcn5j0e3lerk9"
     },
 
+    _askClickedGamecloudLinkHash : "m7su02y27fkwqaor",
+
+    askForClickedGamecloudLink : function(callback) {
+        Gamecloud.hasTriggeredEvent("NOAUTH", this._askClickedGamecloudLinkHash, Gamecloud.getUserId(), Gamecloud.getCharacterId(), callback);
+    },
+
     /**
      * Event fired when triggering player death event
      * @param {String} playerId The id of the player in question

@@ -45,7 +45,6 @@ var Achievements = {
      */
     retrieveAchievementsFromGamecloud : function(callback) {
         Events.checkOwnedAchievementFromGamecloud(Gamecloud.getUserId(), callback);
-        // Once done, callback
     },
     /**
      * Gives an achievement to the player, if the player does not already have it
@@ -85,5 +84,8 @@ var Achievements = {
      */
     zeroAchievements : function() {
         this.ownedAchievements = [];
+    },
+    checkIfClickedGamecloudLink : function(callback) {
+        Events.askForClickedGamecloudLink(callback);
     }
 };

@@ -153,6 +153,20 @@ function AuthCallback(data) {
                 console.log("---Checked achievements from Gamecloud---");
             }
         });
+
+        // Also, check if the user has clicked the link through Browser Quest to Gamecloud
+        Achievements.checkIfClickedGamecloudLink(function(err, result) {
+            if (err) {
+                throw err;
+            } else {
+                console.log("---Checked Clicked Gamecloud Link from the Gamecloud---");
+                if(result.count > 0) {
+                    // We need to give extra space ship for the user
+                    Game.clickedGamecloudLink = true;
+                    Game.lives = 3;
+                }
+            }
+        });
     } else {
         $.notify("Error while logging: " + data, "danger");
     }

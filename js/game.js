@@ -14,6 +14,7 @@ Game = {
     // Gamecloud related flags
     deathSent : false,
     gameOverSent : false,
+    clickedGamecloudLink : false,
 
     // Achievement related stuff
     startedGames : 0,
@@ -105,7 +106,12 @@ Game = {
                 Achievements.giveAchievement("10GamesInARow");
             }
             Game.score = 0;
-            Game.lives = 2;
+            // If gamecloud link has been clicked, give 1 extra life
+            if (Game.clickedGamecloudLink) {
+                Game.lives = 3;
+            } else {
+                Game.lives = 2;
+            }
             Game.totalAsteroids = 2;
             Game.spawnAsteroids();
 
