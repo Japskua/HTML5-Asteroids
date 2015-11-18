@@ -164,6 +164,7 @@ function AuthCallback(data) {
                     // We need to give extra space ship for the user
                     Game.clickedGamecloudLink = true;
                     Game.lives = 3;
+                    $.notify("You are given extra life because you have followed the link in Browser Quest!", "success");
                 }
             }
         });
